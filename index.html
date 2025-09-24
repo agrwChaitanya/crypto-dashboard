@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💰 Crypto Price Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💰 Crypto Price Tracker</h1>
+            <div class="controls">
+                <input type="text" id="searchInput" placeholder="Search cryptocurrencies...">
+                <button id="refreshBtn">🔄 Refresh</button>
+            </div>
+        </header>
+
+        <div class="filters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="favorites">⭐ Favorites</button>
+            <button class="filter-btn" data-filter="gainers">📈 Top Gainers</button>
+            <button class="filter-btn" data-filter="losers">📉 Top Losers</button>
+        </div>
+
+        <div id="loading">Loading cryptocurrency data...</div>
+        
+        <div id="cryptoList" class="crypto-grid"></div>
+        
+        <div id="errorMessage" class="error" style="display: none;">
+            Failed to load data. Please check your connection.
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
